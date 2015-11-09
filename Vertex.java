@@ -9,8 +9,8 @@
 **/
 
 /**
-* Con esta clase se puededeteriminar hacia quÃ© lugar
-* se quiere dirigir la persona. Es uno de los vÃ©rtices
+* Con esta clase se puededeteriminar hacia qué lugar
+* se quiere dirigir la persona. Es uno de los vértices
 * del grafo
 *
 **/
@@ -20,7 +20,7 @@ public class Vertex {
    
     /**
     * Este es el constructor de objetos de la clase
-    * Vertex. AquÃ­ se crea el vÃ©rtice.
+    * Vertex. Aquí se crea el vértice.
     *
     **/
     public Vertex(String nombre){
@@ -28,7 +28,7 @@ public class Vertex {
     }
     
     /**
-    * Get para obtener el nombre del vÃ©rtice
+    * Get para obtener el nombre del vértice
     * (obtener nombre de una ciudad)
     **/
     public String getNombre() {
@@ -36,7 +36,7 @@ public class Vertex {
     }
     
     /**
-     * Set para darle un nombre al vÃ©rtice
+     * Set para darle un nombre al vértice
      * (un nombre a una ciudad)
      *
      **/

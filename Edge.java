@@ -11,9 +11,9 @@
 
 /**
 * Esta clase represetna una arista de un grafo.
-* Con esta clase se puededeteriminar en quÃ© lugar
-* estÃ¡ una persona, hacia donde se dirigie y la
-* distancia que habrÃ¡ entre nodos (distancia en
+* Con esta clase se puededeteriminar en qué lugar
+* está una persona, hacia donde se dirigie y la
+* distancia que habrá entre nodos (distancia en
 * km de una ciudad a otra)
 *
 **/

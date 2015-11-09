@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 /**
 *Esta es la clase que hace al grafo y lo crea
-*a partir de un arreglo de Edges. Hay varios v√©rtices
-*y distancias para llegar de un v√©rtice a otro.
+*a partir de un arreglo de Edges. Hay varios vÈrtices
+*y distancias para llegar de un vÈrtice a otro.
 **/
 public class Graph {
     
@@ -22,10 +22,10 @@ public class Graph {
     private ArrayList vertices;
     private double[][] adyacencia;
     private String[][] recorrido;
-+	
+	
 	/**
 	 *	 este es el constructor de objetos para crear un
-	 * arreglo de distnacias y uno de v√©rtices	
+	 * arreglo de distnacias y uno de vÈrtices	
 	 *
 	 **/
     public Graph(){
@@ -35,7 +35,7 @@ public class Graph {
     }
 	     
 	/**
-	* M√©todo que se utiliza para agregar una arista
+	* MÈtodo que se utiliza para agregar una arista
 	*
 	**/
     public void addVertex(String name){
@@ -43,7 +43,7 @@ public class Graph {
     }
     
     /**
-	* M√©todo que se utiliza para remover una arista
+	* MÈtodo que se utiliza para remover una arista
 	*
 	**/
 	public boolean removeEdge(String origen, String destino){
@@ -63,7 +63,7 @@ public class Graph {
     }
     
 	/**
-	* M√©todo que se utiliza para agregar un v√©rtice
+	* MÈtodo que se utiliza para agregar un vÈrtice
 	* @param: el origen, el destino de llegada y la distancia entre ambos
 	*
 	**/
@@ -94,8 +94,8 @@ public class Graph {
     }
 	
     /**
-	* M√©todo que se utiliza para obtener la distancia entre dos v√©rtices
-	* @param origen, de d√≥nde sale
+	* MÈtodo que se utiliza para obtener la distancia entre dos vÈrtices
+	* @param origen, de dÛnde sale
 	* @param destino, hacia donde va
 	*
 	**/
@@ -116,7 +116,7 @@ public class Graph {
     } 
    
 	 /**
-	* M√©todo que se utiliza para construir el grafo 
+	* MÈtodo que se utiliza para construir el grafo 
 	* como matriz
 	*
 	**/
@@ -134,7 +134,7 @@ public class Graph {
     
     
 	 /**
-	* M√©todo que se utiliza para mostrar matriz
+	* MÈtodo que se utiliza para mostrar matriz
 	**/
     public void imprimirMatriz(){
         System.out.println("Longitud del viaje");
@@ -169,8 +169,8 @@ public class Graph {
         
     
 	/**
-	* M√©todo con el cual se utiliza el algoritno de Floyd
-	* con este se calcula la distancia m√°s corta que deber√°
+	* MÈtodo con el cual se utiliza el algoritno de Floyd
+	* con este se calcula la distancia m·s corta que deber·
 	* recorrer
 	**/
     public void algoritmoFloyd(){
@@ -179,7 +179,7 @@ public class Graph {
         double val2;
         for(int i=0;i<vertices.size();i++){
            
-            for(int x=0;x<vertices.size();x++){qu
+            for(int x=0;x<vertices.size();x++){
                 for(int j=0;j<vertices.size();j++){
                     val1=adyacencia[x][j];
                     val2=adyacencia[x][i]+adyacencia[i][j];
@@ -217,7 +217,7 @@ public class Graph {
     
     
 	 /**
-	* M√©todo que se utiliza para obtener el recorrido que se 
+	* MÈtodo que se utiliza para obtener el recorrido que se 
 	* tiene que recorrer y la distancia a recorrer
 	**/
     public String getRecorrido(String origen, String destino){

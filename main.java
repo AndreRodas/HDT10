@@ -1,6 +1,22 @@
 import java.io.*;
 import java.util.Scanner;
 
+/**
+*Universidad del Valle de Guatemala
+*Algoritmos y Estructura de Datos
+*Seccion: 10
+*Andre Rodas - carnet 14395
+*Yosemite Melendez - carnet: 14413
+*08/11/2015
+*Hoja de Trabajo 10
+**/
+
+
+/**
+* Esta clase main para ejecutar el programa mediante la linea de comamndos
+*
+**/
+
 import javax.swing.JOptionPane;
 
 public class main {
@@ -62,7 +78,7 @@ public class main {
                     System.out.println("Ingrese la ciudad de destino:");
                     String fin = input.nextLine();
                      
-                    double peso = grafo.getPeso(principio,fin);
+                    double peso = grafo.getdistancia(principio, fin);
                     
                     //ruta que no existe
                     if(peso == -1)
