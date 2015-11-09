@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.Scanner;
-
 /**
 *Universidad del Valle de Guatemala
 *Algoritmos y Estructura de Datos
@@ -12,8 +9,14 @@ import java.util.Scanner;
 **/
 
 
+import java.io.*;
+import java.util.Scanner;
+
+
+
 /**
-* Esta clase main para ejecutar el programa mediante la linea de comamndos
+* Esta clase main, utilizada para ejecutar el programa
+* mediante la linea de comamndos
 *
 **/
 
@@ -23,23 +26,26 @@ public class main {
 
     public static void main(String[] args) {
  
-        String[] listaCity;
-        Graph grafo = new Graph();
+        String[] listaCity;			//un arreglo para la lista de ciudades
+        Graph grafo = new Graph();	//nuevo grao
         
         try{
-                 		
+        	// Se abre el archivo grafo.txt donde están las ciudades
 			BufferedReader file = new BufferedReader(new FileReader("grafo.txt"));
             String tempLine;
             int i = 0;
             while ((tempLine = file.readLine()) != null)   {
                
             	listaCity = tempLine.split(" ");
+            	
+            	// Dice la cantidad de ciudades que existen
                 if(i == 0){
                     System.out.println("Existen " + listaCity.length + " ciudades :");
                     for (String TempCity : listaCity) {
                         System.out.print(TempCity + ", ");
                         grafo.addVertex(TempCity);
                     }
+                    //Myestra las rutas que se pueden tomar
                     System.out.println("");
                     System.out.println("-------------------------------Rutas-------------------------------");
                     i++;   
@@ -62,13 +68,13 @@ public class main {
             grafo.crearMatriz();
             grafo.algoritmoFloyd();
             
-            //Menu de opciones
+            //Menu de opciones que se pueden seleccionar
             System.out.println("1. Conocer la ruta más corta entre dos ciudades\n" + "2. Centro del grafo\n" + "3. Realizar modificaciones en las rutas\n" + "4. Salir");     
             System.out.println("Ingrese la opcion que desea: ");
             Scanner input = new Scanner(System.in);
 			opcion = Integer.parseInt(input.nextLine());
             
-          
+			//Opción que selecciona el usuario
             switch(opcion){
                 case 1:
                           
@@ -80,7 +86,7 @@ public class main {
                      
                     double peso = grafo.getdistancia(principio, fin);
                     
-                    //ruta que no existe
+                    //Mensaje de ruta que no existe
                     if(peso == -1)
                         System.out.println("No existe ruta entre las ciudades o ha ingresado una ciudad no existente");
                     else
@@ -99,7 +105,7 @@ public class main {
                     
                
                     while(opcion2!=3){
-                       
+                       //Se puede crear una interrupción entre ciudades
                     	System.out.println("1. Crear interrupcion entre dos ciudades\n" + "2. Crear conexión entre dos ciudades\n" + "3. Salir");          
                         
                     	System.out.println("Ingrese la opcion que desea:");
@@ -119,7 +125,7 @@ public class main {
                                 }
                                
                                 break;
-                            case 2: //Crear coneccion 
+                            case 2: //Crear conexion 
                             	
                             	System.out.println("Ciudad de origen: ");
                                 String origen2  = input.nextLine();
