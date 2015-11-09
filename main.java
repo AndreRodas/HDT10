@@ -84,13 +84,13 @@ public class main {
                     System.out.println("Ingrese la ciudad de destino:");
                     String fin = input.nextLine();
                      
-                    double peso = grafo.getdistancia(principio, fin);
+                    double distancia = grafo.getdistancia(principio, fin);
                     
                     //Mensaje de ruta que no existe
-                    if(peso == -1)
+                    if(distancia == -1)
                         System.out.println("No existe ruta entre las ciudades o ha ingresado una ciudad no existente");
                     else
-                    	System.out.println("La distancia entre las ciudades es de: " + peso);
+                    	System.out.println("La distancia entre las ciudades es de: " + distancia);
                     break;
                     
                     
@@ -134,10 +134,10 @@ public class main {
                                 String destino2  = input.nextLine();   
                                 
                                 System.out.println("Distancia entre ambas ciudades: ");
-                                peso  = Double.parseDouble(input.nextLine());         
+                                distancia  = Double.parseDouble(input.nextLine());         
                                 
                                 try {
-                                    grafo.addEdge(origen2, destino2, peso);                                    
+                                    grafo.addEdge(origen2, destino2, distancia);                                    
                                     System.out.println("Se creo la conexion exitosamente");
                                 } catch (Exception ex) {                                    
                                 	System.out.println("No se pudo crear la conexion exitosamente");
