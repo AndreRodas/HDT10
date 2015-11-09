@@ -30,7 +30,7 @@ public class main {
         Graph grafo = new Graph();	//nuevo grao
         
         try{
-        	// Se abre el archivo grafo.txt donde están las ciudades
+        	// Se abre el archivo grafo.txt donde estï¿½n las ciudades
 			BufferedReader file = new BufferedReader(new FileReader("grafo.txt"));
             String tempLine;
             int i = 0;
@@ -69,12 +69,12 @@ public class main {
             grafo.algoritmoFloyd();
             
             //Menu de opciones que se pueden seleccionar
-            System.out.println("1. Conocer la ruta más corta entre dos ciudades\n" + "2. Centro del grafo\n" + "3. Realizar modificaciones en las rutas\n" + "4. Salir");     
+            System.out.println("1. Conocer la ruta mï¿½s corta entre dos ciudades\n" + "2. Centro del grafo\n" + "3. Realizar modificaciones en las rutas\n" + "4. Salir");     
             System.out.println("Ingrese la opcion que desea: ");
             Scanner input = new Scanner(System.in);
 			opcion = Integer.parseInt(input.nextLine());
             
-			//Opción que selecciona el usuario
+			//Opciï¿½n que selecciona el usuario
             switch(opcion){
                 case 1:
                           
@@ -84,13 +84,13 @@ public class main {
                     System.out.println("Ingrese la ciudad de destino:");
                     String fin = input.nextLine();
                      
-                    double distancia = grafo.getdistancia(principio, fin);
+                    double peso = grafo.getdistancia(principio, fin);
                     
                     //Mensaje de ruta que no existe
-                    if(distancia == -1)
+                    if(peso == -1)
                         System.out.println("No existe ruta entre las ciudades o ha ingresado una ciudad no existente");
                     else
-                    	System.out.println("La distancia entre las ciudades es de: " + distancia);
+                    	System.out.println("La distancia entre las ciudades es de: " + peso);
                     break;
                     
                     
@@ -105,8 +105,8 @@ public class main {
                     
                
                     while(opcion2!=3){
-                       //Se puede crear una interrupción entre ciudades
-                    	System.out.println("1. Crear interrupcion entre dos ciudades\n" + "2. Crear conexión entre dos ciudades\n" + "3. Salir");          
+                       //Se puede crear una interrupciï¿½n entre ciudades
+                    	System.out.println("1. Crear interrupcion entre dos ciudades\n" + "2. Crear conexiï¿½n entre dos ciudades\n" + "3. Salir");          
                         
                     	System.out.println("Ingrese la opcion que desea:");
                     	opcion2 = Integer.parseInt(input.nextLine());
@@ -134,10 +134,10 @@ public class main {
                                 String destino2  = input.nextLine();   
                                 
                                 System.out.println("Distancia entre ambas ciudades: ");
-                                distancia  = Double.parseDouble(input.nextLine());         
+                                peso  = Double.parseDouble(input.nextLine());         
                                 
                                 try {
-                                    grafo.addEdge(origen2, destino2, distancia);                                    
+                                    grafo.addEdge(origen2, destino2, peso);                                    
                                     System.out.println("Se creo la conexion exitosamente");
                                 } catch (Exception ex) {                                    
                                 	System.out.println("No se pudo crear la conexion exitosamente");

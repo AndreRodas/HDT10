@@ -1,0 +1,15 @@
+Guatemala Antigua Panajachel Reu Puerto Barrios
+Guatemala Antigua 60                                                                                                     
+Guatemala Reu 200
+Antigua Reu 180
+Puerto Barrios Panajachel 100
+Guatemala Panajachel 250
+Panajachel Reu 180
+Puerto Barrios Antigua 240
+Reu Puerto Barrios 340
+Guatemala Puerto Barrios 300
+Antigua Panajachel 190
+
+
+
+
