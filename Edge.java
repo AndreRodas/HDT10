@@ -1,15 +1,46 @@
+/**
+*Universidad del Valle de Guatemala
+*Algoritmos y Estructura de Datos
+*Seccion: 10
+*Andre Rodas - carnet 14395
+*Yosemite Melendez - carnet: 14413
+*08/11/2015
+*Hoja de Trabajo 10
+**/
+
+
+/**
+* Esta clase represetna una arista de un grafo.
+* Con esta clase se puededeteriminar en qué lugar
+* está una persona, hacia donde se dirigie y la
+* distancia que habrá entre nodos (distancia en
+* km de una ciudad a otra)
+*
+**/
 public class Edge {
     
-    private Vertex origen;
-    private Vertex destino;
-    private double peso;
+    private Vertex origen;		// de donde parte
+    private Vertex destino;		// hacia donde va
+    private double distancia;
     
-    public Edge(Vertex origen, Vertex destino, double peso){
+    /**
+    * Este es el constructor de objetos
+    * se crea la arista
+    *
+    **/
+    public Edge(Vertex origen, Vertex destino, double distancia){
         this.origen=origen;
         this.destino=destino;
-        this.peso=peso;
+        this.distancia=distancia;
     }
     
+    
+    /**
+    * Setters y Getters de origen, destino y distancia
+    * Permiten establecer y/u obtner un origne, destino 
+    * o distiancia en el grafo
+    *
+    **/
 	public void setOrigen(Vertex origen) {
         this.origen = origen;
     }
@@ -34,12 +65,12 @@ public class Edge {
         return false;
     }
 	
-    public void setPeso(float peso) {
-        this.peso = peso;
+    public void setdistancia(float distancia) {
+        this.distancia = distancia;
     }
 	
-	  public double getPeso() {
-        return peso;
+	  public double getdistancia() {
+        return distancia;
     }
    
 }
